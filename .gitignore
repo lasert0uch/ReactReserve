@@ -1,5 +1,6 @@
 node_modules
 .next
+next.config.js
 dist
 next.config.*
 now.json
