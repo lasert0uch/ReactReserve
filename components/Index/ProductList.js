@@ -7,16 +7,21 @@ function ProductList({ products }) {
       image: product.mediaUrl,
       meta: `Price: $${product.price}`,
       color: 'teal',
-      fluid: false,
+      fluid: true,
       childKey: product._id,
-      // href: `/product?_id=${product._id}`,
-      href: `https://www.google.com`,
-      target: '_blank'
-
+      href: `/product?_id=${product._id}`,
+      // href: `https://www.google.com`,
+      // target: '_blank'
     }))
   }
 
-  return <Card.Group items={mapProductsToItems(products)} />;
+  return (
+    <Card.Group
+      stackable
+      itemsPerRow="3"
+      centered
+      items={mapProductsToItems(products)} />
+  );
 }
 
 export default ProductList;
