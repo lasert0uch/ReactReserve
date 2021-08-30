@@ -2,7 +2,7 @@ import { Card } from 'semantic-ui-react';
 
 function ProductList({ products }) {
   function mapProductsToItems(products) {
-    return products.map(product => ({
+    return products.map(product => ({ // Can add instance for ID's here
       header: product.name,
       image: product.mediaUrl,
       meta: `Price: $${product.price}`,

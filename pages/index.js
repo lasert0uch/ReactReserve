@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ProductsList from '../components/Index/ProductList';
+import baseUrl from '../utils/baseUrl';
 
 function Home({ products }) {
 
@@ -10,7 +11,7 @@ function Home({ products }) {
 Home.getInitialProps = async () => {
   // Fetch API Data
   //Return Response data
-  const url = 'http://localhost:3000/api/products'
+  const url = `${baseUrl}/api/products`
   const response = await axios.get(url)
 
   return { products: response.data }
