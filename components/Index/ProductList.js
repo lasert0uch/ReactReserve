@@ -10,8 +10,6 @@ function ProductList({ products }) {
       fluid: true,
       childKey: product._id,
       href: `/product?_id=${product._id}`,
-      // href: `https://www.google.com`,
-      // target: '_blank'
     }))
   }
 
