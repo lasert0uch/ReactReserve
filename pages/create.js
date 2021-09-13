@@ -55,6 +55,7 @@ function CreateProduct() {
       const url = `${baseUrl}/api/product`;
       const { name, price, description } = product;
       const payload = { name, price, description, mediaUrl };
+      console.log({ payload: { payload }, url })
       if (!name || !price || !description || !mediaUrl) {
         console.log(
           { name: name, price: price, description: description, mediaUrl: mediaUrl, url: url }
