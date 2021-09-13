@@ -50,10 +50,15 @@ function CreateProduct() {
       setLoading(true);
       setError('');
       const mediaUrl = await handleImageUpload();
-      // console.log({ mediaUrl }) // Logs mediaUrl from Cloudinary on Submit
+      console.log({ mediaUrl }) // Logs mediaUrl from Cloudinary on Submit
       const url = `${baseUrl}/api/product`;
       const { name, price, description } = product;
       const payload = { name, price, description, mediaUrl };
+      if (!name || !price || !description || !mediaUrl) {
+        console.log(
+          { name: name, price: price, description: description, mediaUrl: mediaUrl, url: url }
+        )
+      }
       const response = await axios.post(url, payload);
       // console.log({ response }) // Logs Response from API
       setMediaPreview('');
