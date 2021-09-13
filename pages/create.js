@@ -48,9 +48,13 @@ function CreateProduct() {
     try {
       console.log('handleSubmit() Try');
       event.preventDefault();
+      console.log('preventDefault()');
       setLoading(true);
+      console.log('setLoading()');
       setError('');
+      console.log('setError()');
       const mediaUrl = await handleImageUpload();
+      console.log('handleImageUpload()');
       console.log({ mediaUrl }) // Logs mediaUrl from Cloudinary on Submit
       const url = `${baseUrl}/api/product`;
       const { name, price, description } = product;
