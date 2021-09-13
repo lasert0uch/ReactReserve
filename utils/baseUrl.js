@@ -1,5 +1,5 @@
 const baseUrl = process.env.NODE_ENV === "production"
-    ? 'https://vercel.com/lasert0uch/react-reserve'
+    ? 'https://react-reserve-mu.vercel.app/'
     : 'http://localhost:3000'
 
 export default baseUrl
