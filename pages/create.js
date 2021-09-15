@@ -35,11 +35,17 @@ function CreateProduct() {
   }
 
   async function handleImageUpload() {
+    console.log(`handleImageUpload - 1`)
     const data = new FormData();
+    console.log(`handleImageUpload - 2`)
     data.append('file', product.media);
+    console.log(`handleImageUpload - 3`)
     data.append('upload_preset', 'ReactReserve');
+    console.log(`handleImageUpload - 4`)
     data.append('cloud_name', 'dbof5r0y2');
+    console.log(`handleImageUpload - 5`)
     const response = await axios.post(process.env.CLOUDINARY_URL, data);
+    console.log(`handleImageUpload - 6`)
     const mediaUrl = response.data.url;
     return mediaUrl;
   }
