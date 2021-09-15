@@ -44,7 +44,6 @@ function CreateProduct() {
     console.log(`handleImageUpload - 4`)
     data.append('cloud_name', 'dbof5r0y2');
     console.log(`handleImageUpload - 5`)
-    console.log(data.keys(), data.values(), data.getAll())
     const response = await axios.post(process.env.CLOUDINARY_URL, data);
     console.log(`handleImageUpload - 6`)
     const mediaUrl = response.data.url;
