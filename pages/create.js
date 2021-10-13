@@ -40,7 +40,7 @@ function CreateProduct() {
     console.log(`handleImageUpload - 2`)
     data.append('file', product.media);
     if (!product.media) {
-      console.log("Failed!")
+      console.log(product.media)
     }
     console.log(`handleImageUpload - 3`)
     data.append('upload_preset', 'ReactReserve');
