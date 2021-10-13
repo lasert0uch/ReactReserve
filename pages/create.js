@@ -39,6 +39,9 @@ function CreateProduct() {
     const data = new FormData();
     console.log(`handleImageUpload - 2`)
     data.append('file', product.media);
+    if (!product.media) {
+      console.log("Failed!")
+    }
     console.log(`handleImageUpload - 3`)
     data.append('upload_preset', 'ReactReserve');
     console.log(`handleImageUpload - 4`)
